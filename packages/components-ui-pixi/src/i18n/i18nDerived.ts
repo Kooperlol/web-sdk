@@ -10,9 +10,9 @@ export const i18nDerived = {
 	disable: () => stateI18nDerived.translate('DISABLE'),
 	freeSpins: () => stateI18nDerived.translate('FREE SPINS'),
 	//
-	decrease: () => stateI18nDerived.translate('-'),
-	increase: () => stateI18nDerived.translate('+'),
-	menu: () => stateI18nDerived.translate('MENU'),
+	decrease: () => '▼',
+	increase: () => '▲',
+	menu: () => '☰',
 	turbo: () => stateI18nDerived.translate('TURBO'),
 	autoSpin: () => stateI18nDerived.translate('AUTO SPIN'),
 	payTable: () => stateI18nDerived.translate('PAYTABLE'),
@@ -20,5 +20,5 @@ export const i18nDerived = {
 	settings: () => stateI18nDerived.translate('SETTINGS'),
 	soundOn: () => stateI18nDerived.translate('SOUND ON'),
 	soundOff: () => stateI18nDerived.translate('SOUND OFF'),
-	menuExit: () => stateI18nDerived.translate('EXIT'),
+	menuExit: () => '✕',
 };

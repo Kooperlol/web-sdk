@@ -1,0 +1,31 @@
+{"frames": {
+
+"board-1.webp":
+{
+	"frame": {"x":0,"y":0,"w":2048,"h":2048},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":2048,"h":2048},
+	"sourceSize": {"w":2048,"h":2048}
+},
+"board-2.webp":
+{
+	"frame": {"x":2048,"y":0,"w":2048,"h":2048},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":2048,"h":2048},
+	"sourceSize": {"w":2048,"h":2048}
+}},
+"animations": {
+	"board": ["board-1.webp","board-2.webp"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "reels_frame.png",
+	"format": "RGBA8888",
+	"size": {"w":4096,"h":2048},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:4b60a61c7fc045e5f4d4585bc133657e:a4fdd3fd096b7145e74cf859616c97f2:1ba50494ab51047a1700d7014bdc8f00$"
+}
+}

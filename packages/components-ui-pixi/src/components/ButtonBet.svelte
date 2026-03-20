@@ -7,7 +7,6 @@
 	import UiSprite from './UiSprite.svelte';
 	import ButtonBetProvider from './ButtonBetProvider.svelte';
 	import { UI_BASE_FONT_SIZE, UI_BASE_SIZE } from '../constants';
-	import { i18nDerived } from '../i18n/i18nDerived';
 
 	const props: Partial<Omit<ButtonProps, 'children'>> = $props();
 	const disabled = $derived(!stateBetDerived.isBetCostAvailable());
@@ -20,32 +19,32 @@
 		<Button {...props} {sizes} {onpress} {disabled}>
 			{#snippet children({ center, hovered })}
 				<Container {...center}>
-					<UiSprite
-						key="bet"
-						width={sizes.width}
-						height={sizes.height}
-						anchor={0.5}
-						{...disabled || ['spin_disabled', 'stop_disabled'].includes(key)
-							? {
-									backgroundColor: 0xaaaaaa,
-								}
-							: {}}
-					/>
-					<Text
-						anchor={0.5}
-						text={['spin_default', 'spin_disabled'].includes(key)
-							? i18nDerived.bet()
-							: i18nDerived.stop()}
-						style={{
-							align: 'center',
-							wordWrap: true,
-							wordWrapWidth: 200,
-							fontFamily: 'proxima-nova',
-							fontWeight: '600',
-							fontSize: UI_BASE_FONT_SIZE * 0.9,
-							fill: 0xffffff,
-						}}
-					/>
+				<UiSprite
+					key="bet"
+					width={sizes.width}
+					height={sizes.height}
+					anchor={0.5}
+					borderRadius={sizes.width / 2}
+					backgroundColor={0xffffff}
+					{...disabled || ['spin_disabled', 'stop_disabled'].includes(key)
+						? {
+								backgroundColor: 0xcccccc,
+							}
+						: {}}
+				/>
+				<Text
+					anchor={0.5}
+					text={['spin_default', 'spin_disabled'].includes(key) ? '↻' : '◼'}
+					style={{
+						align: 'center',
+						fontFamily: 'proxima-nova',
+						fontWeight: '700',
+						fontSize: UI_BASE_FONT_SIZE * 1.6,
+						fill: disabled || ['spin_disabled', 'stop_disabled'].includes(key)
+							? 0x888888
+							: 0x111111,
+					}}
+				/>
 				</Container>
 			{/snippet}
 		</Button>

@@ -16,14 +16,16 @@
 
 	const labelStyle = {
 		fontFamily: 'proxima-nova',
-		fontSize: UI_BASE_FONT_SIZE,
-		fill: WHITE,
+		fontSize: UI_BASE_FONT_SIZE * 0.6,
+		fill: 0x9999aa,
+		fontWeight: '400',
 	} as const;
 
 	const valueStyle = {
 		fontFamily: 'proxima-nova',
 		fontSize: UI_BASE_FONT_SIZE,
 		fill: WHITE,
+		fontWeight: '700',
 	} as const;
 </script>
 
@@ -39,7 +41,7 @@
 		/>
 	{/if}
 	<Text anchor={{ x: 0.5, y: 0 }} text={props.label} style={labelStyle} />
-	<Text anchor={{ x: 0.5, y: 0 }} text={props.value} style={valueStyle} y={UI_BASE_FONT_SIZE} />
+	<Text anchor={{ x: 0.5, y: 0 }} text={props.value} style={valueStyle} y={UI_BASE_FONT_SIZE * 0.7} />
 {:else}
 	{#if props.tiled}
 		<UiSprite
